@@ -15,7 +15,7 @@ bool segMent[10][7] = {
   1, 1, 1, 1, 0, 1, 1
 };
 
-hw_timer_t * timer = NULL;  // create a hardware timer
+hw_timer_t * timer = NULL;
 
 void IRAM_ATTR onTimer() {
   if (digit == 0) {
@@ -36,7 +36,7 @@ void IRAM_ATTR onTimer() {
 }
 
 void setup() {
-  timer = timerBegin(0, 80, true);  // Timer number 0
+  timer = timerBegin(0, 80, true);
   timerAttachInterrupt(timer, &onTimer, true);
   timerAlarmWrite(timer, 1000000 / 30 / 2, true);
   timerAlarmEnable(timer);
@@ -52,5 +52,4 @@ void setup() {
 }
 
 void loop() {
-  // ไม่มีการนับเพิ่มขึ้นแล้ว
 }
