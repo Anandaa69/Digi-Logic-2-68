@@ -9,7 +9,6 @@ const char* password = "xxxxxxxx";
 // กำหนดเวลาในรูปแบบ UTC (เช่น UTC+9 = 9 * 3600)
 const long utcOffsetInSeconds = 7 * 3600; // UTC+9 สำหรับ Japan
 
-// กำหนด NTP server
 const char* ntpServer = "pool.ntp.org";
 
 void setup() {
@@ -26,12 +25,12 @@ void setup() {
   digitalWrite(LED, LOW);
 
   // เริ่มการใช้งานเวลา NTP
-  configTime(utcOffsetInSeconds, 0, ntpServer);  // ตั้งค่า NTP server และ UTC+9 สำหรับ Japan
+  configTime(utcOffsetInSeconds, 0, ntpServer);
 }
 
 void loop() {
   struct tm timeinfo;
-  if (!getLocalTime(&timeinfo)) {  // รับเวลาจาก NTP server
+  if (!getLocalTime(&timeinfo)) {
     Serial.println("Failed to obtain time");
     return;
   }
@@ -52,5 +51,5 @@ void loop() {
   Serial.print("/");
   Serial.println(timeinfo.tm_year + 1900);  // ปีจะเริ่มจาก 1900
 
-  delay(1000); // รอ 1 วินาที
+  delay(1000);
 }
