@@ -1,3 +1,6 @@
+const int DG[2]={27,14};
+const int segMentPin[7]={4,0,17,16,23,19,18};
+const int dot=20;
 int i;
 int digit = 0;
 int num = 7;  // เริ่มต้นที่เลข 7
