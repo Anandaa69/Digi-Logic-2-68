@@ -7,7 +7,7 @@ const char* ssid = "xxxxxxxxxxxx";
 const char* password = "xxxxxxxx";
 
 // กำหนดเวลาในรูปแบบ UTC (เช่น UTC+9 = 9 * 3600)
-const long utcOffsetInSeconds = 7 * 3600; // UTC+9 สำหรับ Japan
+const long utcOffsetInSeconds = 9* 3600; // UTC+9 สำหรับ Japan
 
 const char* ntpServer = "pool.ntp.org";
 
